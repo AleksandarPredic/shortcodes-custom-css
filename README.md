@@ -3,7 +3,7 @@
 This code will help you make custom css for Visual Composer shortcodes. It can be used to avoid using inline styles and do it the proper WP way.
 
 ### How to use it
-To add your shortcode to the Visual Composer content elements list, vc_map() function should be called with an array of special attributes describing your shortcode. $params Associative array which holds instructions for Visual Composer and is used in "mapping" process. In params array we have only one element as array with list of params.
+To add your shortcode to the Visual Composer content elements list, vc_map() function should be called with an array of special attributes describing your shortcode. $params Associative array holds instructions for Visual Composer and is used in "mapping" process. In params array we have only one element as array with list of params.
  
  ```
 <?php
@@ -47,7 +47,7 @@ vc_map( array(
 ) );
 
 ```
-After you describe all shortcode's attributes that should be editable with Visual Composer interface you can add code which generate custom css. Here you can add array of elements such as param_name, property... param_name must be the same as your parameter name and property could be color or background depending of that for which property you want to add css. In this array you need shortcode_element which is class name. You can also use alpha parameter and the function will convert it to rgba.
+After you describe all shortcode's attributes that should be editable with Visual Composer interface you can add code which generate custom css. Here you can add array of elements such as param_name, property... param_name must be the same as your parameter name and property could be color, background or other property depending of that for which property you want to add css. In this array you need shortcode_element which is class name. You can also use alpha parameter and the function will convert it to rgba.
 
 ```
 Shortcodes_Custom_Css::add_to_queue( array(
@@ -60,7 +60,8 @@ Shortcodes_Custom_Css::add_to_queue( array(
 	),
 ```
 
-Shortcode class sufix will add some sufix after class name or even new class. You can use thsi if you need hover on some element. In that case you need two elements with the same shortcode_element and one of them should have shortcode_class_sufix :hover.
+Shortcode class sufix will add some sufix after class name or even new class. You can use this if you need hover on some element. In that case you need two elements with the same shortcode_element and one of them should have shortcode_class_sufix :hover.
+
 ```
 	array(            
 		"param_name" => "text_color",
@@ -77,7 +78,7 @@ Shortcode class sufix will add some sufix after class name or even new class. Yo
 ) );
 ```		
 		
-### Chengelog
+### Changelog
 1.0.0 (November 2017)
 Official release
 
