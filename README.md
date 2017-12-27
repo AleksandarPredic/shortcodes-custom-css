@@ -60,7 +60,7 @@ Shortcodes_Custom_Css::add_to_queue( array(
 	),
 ```
 
-Shortcode class sufix you can use if you need hover on some element. In that case you need two elements with the same shortcode_element and one of them should have shortcode_class_sufix :hover.
+Shortcode class sufix will add some sufix after class name or even new class. You can use thsi if you need hover on some element. In that case you need two elements with the same shortcode_element and one of them should have shortcode_class_sufix :hover.
 ```
 	array(            
 		"param_name" => "text_color",
