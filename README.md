@@ -1,8 +1,8 @@
-#Shortcodes custom css
+# Shortcodes custom css
 
 This code will help you make custom css for Visual Composer shortcodes. It can be used to avoid using inline styles and do it the proper WP way.
 
-###How to use it
+### How to use it
 To add your shortcode to the Visual Composer content elements list, vc_map() function should be called with an array of special attributes describing your shortcode. $params Associative array which holds instructions for Visual Composer and is used in "mapping" process. After you describe all shortcode's attributes that should be editable with Visual Composer interface you can add code which generate custom css. Here you can add param_name, property, shortcode class sufix if you need it for that element and shortcode element which is class name.
 
 ```
@@ -50,15 +50,15 @@ vc_map( array(
         ),
 ```
 
-###Chengelog
+### Chengelog
 1.0.0 (November 2017)
 Official release
 
-###Developers
+### Developers
 Miss a feature? Pull requests are welcome.
 
 The project is open-source and hopefully will receive contributions from awesome WordPress Developers throughout the world.
 
-###Author information
+### Author information
 The Shortcodes Custom Css was originally started and is maintained by Aleksandar Predic.
 
