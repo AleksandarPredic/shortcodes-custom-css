@@ -5,6 +5,7 @@ This code will help you make custom css for Visual Composer shortcodes. It can b
 ###How to use it
 To add your shortcode to the Visual Composer content elements list, vc_map() function should be called with an array of special attributes describing your shortcode. $params Associative array which holds instructions for Visual Composer and is used in "mapping" process. After you describe all shortcode's attributes that should be editable with Visual Composer interface you can add code which generate custom css. Here you can add param_name, property, shortcode class sufix if you need it for that element and shortcode element which is class name.
 
+```
 <?php
 /*
  * Map new shortcode
@@ -47,7 +48,8 @@ vc_map( array(
             'shortcode_element' => '.class-name',
             'property' => 'color',
         ),
-		
+```
+
 ###Chengelog
 1.0.0 (November 2017)
 Official release
