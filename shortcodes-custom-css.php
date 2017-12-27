@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Class Shi_Shortcodes_Custom_Css
+ * Class Shortcodes_Custom_Css
  * Responsible for creating custom css for Visual Composer shortcodes
  */
-class Shi_Shortcodes_Custom_Css {
+class Shortcodes_Custom_Css {
 
     /**
      * Order of shortcodes appearing on page so we can generate unique id for shortcode
@@ -22,21 +22,21 @@ class Shi_Shortcodes_Custom_Css {
      * Generated custom css
      * @var string
      */
-    private $transient_key_cache = 'shi_shortcodes_custom_css';
+    private $transient_key_cache = 'shortcodes_custom_css';
 
     /**
      * List of shortcodes to check into post content.
      * It is cached self::$shortcodes to check for changes and regenerate cache
      * @var string
      */
-    private $transient_key_shortcodes = 'shi_shortcodes_custom_css_shordcodes';
+    private $transient_key_shortcodes = 'shortcodes_custom_css_shordcodes';
 
     /**
      * Post edit time saved when css is generated.
      * Use to compare if page is changed to regenerate cache
      * @var string
      */
-    private $transient_key_edit_time = 'shi_shortcodes_custom_css_edit_time';
+    private $transient_key_edit_time = 'shortcodes_custom_css_edit_time';
 
     /**
      * String to store instead of generated css to skip checking page for shortcodes.
@@ -58,7 +58,7 @@ class Shi_Shortcodes_Custom_Css {
     private $post_meta;
 
     /**
-     * Shi_Shortcodes_Custom_Css constructor.
+     * Shortcodes_Custom_Css constructor.
      *
      * @hooked to wp_head to add page check
      */
@@ -274,7 +274,7 @@ class Shi_Shortcodes_Custom_Css {
         /**
          * Generate custom css style and cache all
          */
-        $parsed_css = '<style type="text/css" data-type="shi-shortcodes-custom-css">' . $this->compress_css( implode( ' ', $css ) ) . '</style>';
+        $parsed_css = '<style type="text/css" data-type="shortcodes-custom-css">' . $this->compress_css( implode( ' ', $css ) ) . '</style>';
         $this->set_cache( 'css', $parsed_css );
         $this->set_cache( 'shortcodes', self::$shortcodes );
         $this->set_cache( 'edit_time', $this->post_meta['_edit_lock'] );
@@ -426,4 +426,4 @@ class Shi_Shortcodes_Custom_Css {
     }
 
 }
-new Shi_Shortcodes_Custom_Css();
+new Shortcodes_Custom_Css();
